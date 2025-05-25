@@ -1,0 +1,23 @@
+# Project scope
+
+Project contains Robot Framework test for Q-Factory webpage top menu navigation.
+
+## Prerequisites
+
+See requirements.txt for needed installations and dependencies.
+
+## Running tests
+
+To run the tests from the Command line, navigate to the root of the project structure and run command:
+
+```
+robot tests/navigation_menu.robot
+```
+
+Tests will run by default for the Finnish website https://q-factory.fi/.
+To run the tests for the English site https://q-factory.fi/en/, use LANGUAGE variable . 
+Values 'fi' and 'en' are supported:
+
+```
+robot --variable LANGUAGE:en tests/navigation_menu.robot
+```
