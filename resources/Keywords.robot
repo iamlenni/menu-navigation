@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Process
 
 Resource    variables_fi.resource
 Resource    variables_en.resource
@@ -24,9 +25,9 @@ Click menu item named
         ${locator}=  Replace variables  ${MENU_LINK_LOCATOR}
         Wait Until Element Is Visible    ${locator}    5s
         Click Element    ${locator}
-        Wait For Condition    return document.readyState == "complete"
-        Wait Until Element Is Not Visible    class:e-page-transition--preloader
-        Sleep    2s
+        # tried to wait for the page loading but didn't work:
+        #Wait For Condition    return document.readyState == "complete"
+        #Wait For Condition    return jQuery.active == 0
     ELSE
         Log    Menu item variable is empty, not clicking
     END
@@ -42,15 +43,15 @@ Verify page title
 Verify page location
     [Arguments]    ${location}
     IF    '${location}' != '${EMPTY}'
-        Location Should Be    ${location}
+        Wait Until Location Is    ${location}
     ELSE
         Log    Location variable is empty, not verifying it
     END
 
-Verify page title and location
-    [Arguments]    ${title}    ${location}
-    Verify page title    ${title}
+Verify page location and title
+    [Arguments]    ${location}    ${title}
     Verify page location    ${location}
+    Verify page title    ${title}
 
 Open contact page
     Click element    //div[@aria-label='avaa yhteydenottolomake']

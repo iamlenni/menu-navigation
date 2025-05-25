@@ -13,19 +13,19 @@ ${LANGUAGE}     fi
 Verify Top Page Navigation links
    Open homepage and accept cookies
    Click menu item named            ${menuitem_services}
-   Verify page title and location    ${title_services}    ${url_services}
+   Verify page location and title    ${url_services}    ${title_services}
 
    Click menu item named            ${menuitem_customers}
-   Verify page title and location    ${title_customers}    ${url_customers}
+   Verify page location and title    ${url_customers}    ${title_customers}
 
    Click menu item named            ${menuitem_career}
-   Verify page title and location    ${title_career}    ${url_career}
+   Verify page location and title    ${url_career}    ${title_career}
 
    Click menu item named            ${menuitem_news}
-   Verify page title and location    ${title_news}    ${url_news}
+   Verify page location and title    ${url_news}    ${title_news}
 
    Click menu item named            ${menuitem_company}
-   Verify page title and location    ${title_company}    ${url_company}
+   Verify page location and title    ${url_company}    ${title_company}
 
    Open contact page
 

@@ -27,5 +27,5 @@ robot --variable LANGUAGE:en tests/navigation_menu.robot
 
 ## Known issues and improvements for future
 
-- [ ] Improving page verification. Instead of hard-coded 2 seconds wait, wait for a specific element to verify that the correct page has loaded.
+- [ ] Improving page verification. Instead of waiting for the expected URL to load, wait for a specific element to verify that the correct page has loaded.
 - [ ] Clicking and verifying also "English" and "Suomi" buttons
