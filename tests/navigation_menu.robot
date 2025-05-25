@@ -12,25 +12,22 @@ ${LANGUAGE}     fi
 *** Test Cases ***
 Verify Top Page Navigation links
    Open homepage and accept cookies
-   Click menu item named       ${menuitem_services}
-   #Location Should Be   https://q-factory.fi/palvelut/
-   Verify page title           ${title_services}
+   Click menu item named            ${menuitem_services}
+   Verify page title and location    ${title_services}    ${url_services}
 
-   Click menu item named       ${menuitem_customers}
-   #Location Should Be   https://q-factory.fi/asiakkaat/
-   Verify page title           ${title_customers}
+   Click menu item named            ${menuitem_customers}
+   Verify page title and location    ${title_customers}    ${url_customers}
 
-   Click menu item named       ${menuitem_career}
-   #Location Should Be  https://q-factory.fi/toihin/
-   Verify page title           ${title_career}
+   Click menu item named            ${menuitem_career}
+   Verify page title and location    ${title_career}    ${url_career}
 
-   Click menu item named       ${menuitem_news}
-   Verify page title           ${title_news}
+   Click menu item named            ${menuitem_news}
+   Verify page title and location    ${title_news}    ${url_news}
 
-   Click menu item named       ${menuitem_company}
-   Verify page title           ${title_company}
+   Click menu item named            ${menuitem_company}
+   Verify page title and location    ${title_company}    ${url_company}
 
-   Open contact form
+   Open contact page
 
 
 

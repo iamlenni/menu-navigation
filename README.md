@@ -1,6 +1,7 @@
 # Project scope
 
 Project contains Robot Framework test for Q-Factory webpage top menu navigation.
+Test will open Q-Factory main page, and the click on the navigation bar menu elements one-by-one, verifying that correct page is opened from each menu item.
 
 ## Prerequisites
 
@@ -21,3 +22,8 @@ Values 'fi' and 'en' are supported:
 ```
 robot --variable LANGUAGE:en tests/navigation_menu.robot
 ```
+
+## Known issues and improvements for future
+
+-[ ] Improving page verification. Instead of hard-coded 2 seconds wait, wait for a specific element to verify that the correct page has loaded.
+- [ ] Clicking and verifying also "English" and "Suomi" buttons

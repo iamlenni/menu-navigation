@@ -13,3 +13,8 @@ ${title_customers}
 ${title_career}         Career - Q-Factory
 ${title_news}
 ${title_company}        Company - Q-Factory
+${url_services}         https://q-factory.fi/en/services/
+${url_customers}
+${url_career}           https://q-factory.fi/en/career/
+${url_news}
+${url_company}          https://q-factory.fi/en/company/

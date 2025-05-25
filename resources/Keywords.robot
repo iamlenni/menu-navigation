@@ -38,8 +38,21 @@ Verify page title
     ELSE
         Log    Title variable is empty, not verifying it
     END
+    
+Verify page location
+    [Arguments]    ${location}
+    IF    '${location}' != '${EMPTY}'
+        Location Should Be    ${location}
+    ELSE
+        Log    Location variable is empty, not verifying it
+    END
 
-Open contact form
+Verify page title and location
+    [Arguments]    ${title}    ${location}
+    Verify page title    ${title}
+    Verify page location    ${location}
+
+Open contact page
     Click element    //div[@aria-label='avaa yhteydenottolomake']
     Wait Until Element Is Visible    id:Yhteydenotto
 
